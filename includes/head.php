@@ -19,4 +19,6 @@
 	    <link rel="stylesheet" href="../plugins/daterangepicker/daterangepicker-bs3.css">
 	    <link rel="stylesheet" href="../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
 	    <link rel="stylesheet" href="../css/mystyle.css">
+	    <!-- <script src="../js/myscript.js"></script>
+	  	-->
 	  </head>

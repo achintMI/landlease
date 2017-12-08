@@ -1,53 +1,23 @@
-.headerFont{
-	color: black;
-	font-weight: bolder;
-	font-size: 50px;
+.filterable {
+    margin-top: 15px;
 }
-.mainHomeSection{
-	border-top: 1px dotted blue;
+.filterable .panel-heading .pull-right {
+    margin-top: -20px;
 }
-.rowDetails{
-	border: 2px solid black;
+.filterable .filters input[disabled] {
+    background-color: transparent;
+    border: none;
+    cursor: auto;
+    box-shadow: none;
+    padding: 0;
+    height: auto;
 }
-.HomeRow1{
-	height: 300px;
-	background: #FAFAD2;
+.filterable .filters input[disabled]::-webkit-input-placeholder {
+    color: #333;
 }
-.HomeRow2{
-	height: 300px;
-	background: #90EE90;
+.filterable .filters input[disabled]::-moz-placeholder {
+    color: #333;
 }
-.HomeRow3{
-	height: 300px;
-	background: #FFB6C1;
-}
-.HomeRow4{
-	height: 300px;
-	background:  #FFA07A;
-}
-.HomeRow5{
-	height: 300px;
-	background: #87CEFA;
-}
-.HomeRow6{
-	height: 300px;
-	background: #00FA9A;
-}
-.imageStyle{
-	width: 250px;
-	height: 300px;
-	border: 2px solid blue;
-	border-radius: 50%;
-}
-.imageStyle:hover{
-	border: 2px solid red;
-}
-.headings{
-	font-size: 20px;
-	font-weight: bolder;
-}
-.subName{
-	color: red;
-	font-size: 16px;
-	font: Avantgarde, sans-serif;
+.filterable .filters input[disabled]:-ms-input-placeholder {
+    color: #333;
 }

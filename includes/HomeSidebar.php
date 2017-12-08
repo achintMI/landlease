@@ -1,16 +1,37 @@
-
+<?php $usertype = finusertype($_SESSION['user_id']); ?>
       <aside class="main-sidebar">
         <section class="sidebar">
           <div class="user-panel">
           </div>
            <ul class="sidebar-menu">
-            <li class="active treeview">
+            <li class="treeview">
               <a href="Home.php">
                 <i class="glyphicon glyphicon-home"></i> <span>Home</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
-            </li> 
+            </li>
+            <?php if($usertype=='superuser'){
+                ?>
+              <li class="treeview">
+              <a href="maintainuser.php">
+                <i class="glyphicon glyphicon-user"></i> <span>Maintain User</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>
+            </li>
 
-            w
+            <li class="treeview">
+              <a href="adduser.php">
+                <i class="fa fa-pie-chart"></i><span>Add Admin</span><i class="fa fa-angle-left pull-right"></i>
+              </a>
+             </li>
+
+             <li class="treeview">
+              <a href="maintainblock.php">
+                <i class="fa fa-pie-chart"></i><span>Maintain Block</span><i class="fa fa-angle-left pull-right"></i>
+              </a>
+             </li>
+
+            <?php
+            }else{
+              ?>
             <li class="treeview">
               <a href="profile.php">
                 <i class="glyphicon glyphicon-user"></i> <span>Add Khasra</span> <i class="fa fa-angle-left pull-right"></i>
@@ -27,9 +48,10 @@
                 <i class="fa fa-laptop"></i><span>Revenue</span><i class="fa fa-angle-left pull-right"></i>
               </a>
             </li>
+            <?php } ?>
           </ul>
         </section>
-    
+
       </aside>
 
       <!-- Content Wrapper. Contains page content -->
@@ -38,13 +60,7 @@
         <section class="content-header">
           <center>
             <h1 class="headerFont container">
-              
+
             </h1>
           </center>
         </section>
-
-        
-     
-
-
-

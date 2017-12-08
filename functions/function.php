@@ -9,7 +9,7 @@
 	}
   
 	  
-	// function to get user firstname and lastname
+	// function to get user username and email
 	function findUser($user_id){
 
 	  	$query = "select username, user_email from user where user_id = '$user_id'";
@@ -20,7 +20,7 @@
 	  	return $row['username']." ".$row['user_email'];
 	}
 
-	//function to get user batch and branch
+	//function to get user type
 	function user_type($user_id){
 
 		$query = "select user_type from user where user_id = '$user_id'";
@@ -32,16 +32,27 @@
 
 	}
 
-	// function to retrive the image for a particular user
-	function findPic($rollno){
+	// Function to fetch the user type only
+	function finusertype($user_id){
+		$query = "select user_type from user where user_id='$user_id'";
+		$runQuery = mysql_query($query);
+		$row = mysql_fetch_array($runQuery);
+		return $row['user_type'];
+	}
 
-		$query = "select image, Branch from studentDetails where RollNo = '$rollno'";
-	  	$runQuery = mysql_query($query);
+	// Function to get the total admins
 
-	  	$row = mysql_fetch_array($runQuery);
+	function getTotalAdmins(){
+		$query = "select * from user where user_type='admin'";
+		$runQuery =mysql_query($query);
+		return $runQuery;
+	}
 
-	  	return "../images/". $row['image'];
-
+	// Function to get user details
+	function getUserDetails($user_id){
+		$query = "select * from user where user_id='$user_id'";
+		$runQuery = mysql_query($query);
+		return $runQuery;
 	}
 
 	//function to get name of the user
@@ -65,53 +76,6 @@
 	  	$row = mysql_fetch_array($runQuery);
 
 	  	return $row['Email'];
-
-	}
-
-	//function to get Branch
-	function getBranch($rollno){
-
-		$query = "select Branch from studentDetails where RollNo = '$rollno'";
-	  	$runQuery = mysql_query($query);
-
-	  	$row = mysql_fetch_array($runQuery);
-
-	  	return $row['Branch'];
-
-	}
-	//function to get rollno
-	function getSemester($rollno){
-		$query = "select Semester from studentDetails where RollNo = '$rollno'";
-	  	$runQuery = mysql_query($query);
-
-	  	$row = mysql_fetch_array($runQuery);
-
-	  	return $row['Semester'];
-	}
-
-	//function to get Batch
-	function getBatch($rollno){
-
-		$query = "select yearOfJoining from studentDetails where RollNo = '$rollno'";
-	  	$runQuery = mysql_query($query);
-
-	  	$row = mysql_fetch_array($runQuery);
-
-	  	$batchExp = $row['yearOfJoining']+4;
-
-	  	return $row['yearOfJoining']."-".$batchExp;
-
-	}
-
-	//function to get address
-	function getAddress($rollno){
-
-		$query = "select address from studentDetails where RollNo = '$rollno'";
-	  	$runQuery = mysql_query($query);
-
-	  	$row = mysql_fetch_array($runQuery);
-
-	  	return $row['address'];
 
 	}
 

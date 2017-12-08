@@ -22,7 +22,7 @@
     $runQuery = mysql_query($query);
 
     // checking whether the email and password matched or NoRewindIterator
-
+ 
     if(mysql_num_rows($runQuery)==1){
 
       // If condition id satisfied then create a Session
@@ -35,17 +35,16 @@
       //creating a session variable to store current Session
       $_SESSION['user_id'] = $row['user_id'];
 
-      if($user_type == 'admin' || $user_type == 'superuser'){
+      if($user_type == 'admin'){
         header("Location: ../admin/home.php");
+        die();
+      }else if($user_type == 'superuser'){
+        header("Location: ../superadmin/home.php");
         die();
       }else{
         header("Location: home.php");
         die();
       }
-
-      
-      
-      
     }else{
       echo "<script>alert('Incorrect credentials');</script>";
     }
