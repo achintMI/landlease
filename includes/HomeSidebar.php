@@ -19,13 +19,19 @@
 
             <li class="treeview">
               <a href="adduser.php">
-                <i class="fa fa-pie-chart"></i><span>Add Admin</span><i class="fa fa-angle-left pull-right"></i>
+                <i class="fa fa-pie-chart"></i><span>Add User</span><i class="fa fa-angle-left pull-right"></i>
               </a>
              </li>
 
              <li class="treeview">
               <a href="maintainblock.php">
                 <i class="fa fa-pie-chart"></i><span>Maintain Block</span><i class="fa fa-angle-left pull-right"></i>
+              </a>
+             </li>
+
+             <li class="treeview">
+              <a href="addblock.php">
+                <i class="fa fa-pie-chart"></i><span>Add Block</span><i class="fa fa-angle-left pull-right"></i>
               </a>
              </li>
 

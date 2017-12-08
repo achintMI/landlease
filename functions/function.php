@@ -48,6 +48,14 @@
 		return $runQuery;
 	}
 
+	// Function to get the total blocks
+
+	function getTotalBlocks(){
+		$query = "select * from lease_blocks";
+		$runQuery = mysql_query($query);
+		return $runQuery;
+	}
+
 	// Function to get user details
 	function getUserDetails($user_id){
 		$query = "select * from user where user_id='$user_id'";
